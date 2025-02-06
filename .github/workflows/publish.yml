@@ -31,3 +31,10 @@ jobs:
       - run: npm start
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+
+  deployment:
+    runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
+    steps:
+      - name: deploy
