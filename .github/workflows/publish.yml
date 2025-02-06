@@ -38,3 +38,4 @@ jobs:
     concurrency: production
     steps:
       - name: deploy
+        run: echo "Deployment step executed"
